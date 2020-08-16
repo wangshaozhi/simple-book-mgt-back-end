@@ -1,0 +1,22 @@
+#启动端口
+server:
+  port: 8009
+  #开启gzip压缩
+#  compression:
+#    enabled: true
+#数据库配置
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/vbook?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+    driver-class-name: com.mysql.jdbc.Driver
+    #连接池
+    primary.max-idle: 10
+    primary.max-wait: 10000
+    primary.min-idle: 5
+    primary.initial-size: 5
+    primary.validation-query: SELECT 1
+    primary.test-on-borrow: false
+    primary.test-while-idle: true
+    primary.time-between-eviction-runs-millis: 18800
